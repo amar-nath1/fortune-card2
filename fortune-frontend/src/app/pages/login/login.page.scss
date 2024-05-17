@@ -1,0 +1,41 @@
+
+:host{
+    .header-toolbar{
+        --ion-background-color: #009999;
+    }
+    .header-title{
+        font-weight: bolder;
+        margin-top: 25%;
+    margin-bottom: 10%;
+    font-weight: 800;
+    font-size: 2rem;
+    
+    }
+
+    .copyright-image {
+        
+        color: white;
+        text-align: center;
+        position: absolute;
+    bottom: 1%;
+    background: gainsboro;
+    left: 8%;
+      }
+      
+      ion-card-header {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      
+      ion-card-subtitle {
+        font-size: 12px;
+      }
+
+      .loginForm{
+        border-radius: 5px;
+        border: 1px solid black;
+        margin: 10px;
+        padding-bottom: 4rem;
+        padding-top: 4rem;
+      }
+}

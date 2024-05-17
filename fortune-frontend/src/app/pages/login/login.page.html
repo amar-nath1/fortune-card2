@@ -1,0 +1,37 @@
+
+
+<ion-content  [fullscreen]="true">
+  <ion-title class="header-title ion-text-center ion-margin-vertical">Please Login</ion-title>
+  <form class="loginForm" [formGroup]="loginForm" (ngSubmit)="userLogin()">
+  <ion-item>
+    <ion-label>Email :- </ion-label>
+    <ion-input formControlName="email" type="email"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Password :- </ion-label>
+    <ion-input formControlName="password" type="password"></ion-input>
+    <ion-text ><a id="present-alert" >Forgot Password</a></ion-text>
+    <ion-alert
+  trigger="present-alert"
+  header="Reset Password"
+  [buttons]="alertButtons"
+  (didDismiss)="setResult($event)"
+  [inputs]="alertInputs"
+></ion-alert>
+  </ion-item>
+  <ion-text  color="danger">{{errorText}}</ion-text>
+  <ion-button class="theme-color ion-margin-horizontal" type="submit" expand="full">Login</ion-button>
+  <div class="ion-text-center ion-margin-vertical">
+  <ion-text >Don't have an account? <a routerLink="/signup">Sign Up</a></ion-text>
+  
+</div>
+</form>
+<ion-text *ngIf="showUserNotFoundText" color="danger">{{showUserNotFoundText?'User Not Found':'Reset Mail Sent'}}</ion-text>
+<ion-card expand="full" class="copyright-image">
+ 
+  <ion-card-header>
+    <ion-card-subtitle>Copyright © 2023 Amars. All Rights Reserved.</ion-card-subtitle>
+  </ion-card-header>
+</ion-card>
+</ion-content>

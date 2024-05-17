@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="theme-color ion-text-center">
+    <ion-title class="text-color-white">Signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form class="form-class ion-margin" [formGroup]="signUpForm" (ngSubmit)="signUpSubmit()">
+  <ion-item position="stacked">
+    <ion-label>Name :- </ion-label>
+    <ion-input formControlName="name" type="text"></ion-input>
+  </ion-item>
+  <ion-text class="ion-margin-top" color="danger">{{errorText}}</ion-text>
+  <ion-item>
+    <ion-label>Email :- </ion-label>
+    <ion-input formControlName="email" type="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Password :- </ion-label>
+    <ion-input formControlName="password" type="password"></ion-input>
+  </ion-item>
+  <ion-button class="theme-color" type="submit" expand="full">Submit</ion-button>
+  <div class="ion-text-center ion-margin-vertical">
+  <ion-text>Already have an account? <a routerLink="/login">Log In</a></ion-text>
+</div>
+</form>
+<ion-item class="privacy-text">
+<ion-text >Agreed to Privacy policy</ion-text>
+</ion-item>
+</ion-content>
